@@ -1,7 +1,7 @@
 <?php
 global $settings;
 $txt['theme_thumbnail_href'] = $settings['images_url'] . '/thumbnail.png';
-$txt['wt_copyright'] = '<span>Design by <a href="http://www.webtiryaki.com" target="_blank">Webtiryaki</a></span>';
+$txt['theme_description'] = 'Html5, responsive, css sprite icon <br /><br />webtiryaki.com <a href="http://webtiryaki.com">Webtiryaki</a>';
 $txt['foter_divbox'] = 'Boardindex divbox Activate';
 $txt['foter_title1'] = 'Divbox 1.Box Header ';
 $txt['foter_divbox1'] = 'Divbox 1.box contents ';

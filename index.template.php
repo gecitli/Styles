@@ -209,7 +209,7 @@ function template_body_above()
 
 	// Show the menu here, according to the menu sub template, followed by the navigation tree.
 	echo '
-	<div class="navPosition">';
+	<div id="main_menu" class="navPosition">';
 		template_menu();
 
 	echo '
@@ -267,7 +267,7 @@ function template_body_above()
 	</div>
 	<div id="header">
 		<h1 class="forumtitle">
-			<a id="top" href="', $scripturl, '">', empty($context['header_logo_url_html_safe']) ? $context['forum_name_html_safe'] : '<img src="' . $context['header_logo_url_html_safe'] . '" alt="' . $context['forum_name_html_safe'] . '">', '</a>
+			<a id="top" href="', $scripturl, '"><div class="side_icon float"><i class="fab fa-cloudversify"></i></div>', empty($context['header_logo_url_html_safe']) ? $context['forum_name_html_safe'] : '<img src="' . $context['header_logo_url_html_safe'] . '" alt="' . $context['forum_name_html_safe'] . '">', '</a>
 		</h1>';
 		if (!empty($modSettings['userLanguage']) && !empty($context['languages']) && count($context['languages']) > 1)
 	{
@@ -372,7 +372,7 @@ function template_body_below()
 	// There is now a global "Go to top" link at the right.
 		echo '
 		<ul>
-			<li class="floatright"><a href="', $scripturl, '?action=help">', $txt['help'], '</a> ', (!empty($modSettings['requireAgreement'])) ? '| <a href="' . $scripturl . '?action=help;sa=rules">' . $txt['terms_and_rules'] . '</a>' : '', ' | <a href="#top_section">', $txt['go_up'], ' &#9650;</a></li>
+			<li class="floatright"> <a href="http://webtiryaki.com/" title="smf destek" target="_blank"><span class="generic_icons current_theme"></span> Webtiryaki</a> | <a href="', $scripturl, '?action=help">', $txt['help'], '</a> ', (!empty($modSettings['requireAgreement'])) ? '| <a href="'. $scripturl. '?action=help;sa=rules">'. $txt['terms_and_rules']. '</a>' : '', ' | <a href="#top_section">', $txt['go_up'], ' &#9650;</a></li>
 			<li class="copyright">', theme_copyright(), '</li>
 		</ul>';
 
@@ -627,14 +627,14 @@ function foter_divbox()
    <div class="ipsm_footerWrapper">
    <ul class="row">';
 		if(!empty($settings['foter_divbox1']))
-		echo'<li class="footerColumn col-md-5">
+		echo'<li class="footerColumn col-md-6">
 	  ',!empty($settings['foter_title1'])?'<h3><i class="fa fa-question-circle"></i>'.$settings['foter_title1'].'</h3>':'','
 	  <div class="dividerfw"></div>
 	 <p> '.$settings['foter_divbox1'].'</p>
 	</li>';
 		
 		if(!empty($settings['foter_divbox1']))
-		echo'<li class="footerColumn col-md-4">
+		echo'<li class="footerColumn col-md-3">
 	',!empty($settings['foter_title2'])?'<h3><i class="fa fa-sitemap"></i>'.$settings['foter_title2'].'</h3>':'','
 	<div class="dividerfw"></div>
     <ul class="footerList">
@@ -648,20 +648,20 @@ function foter_divbox()
 		
 		if(!empty($settings['foter_divbox1']))
 		echo'<li class="footerColumn col-md-3">
-	',!empty($settings['foter_title3'])?'<h3><i class="fa fa-envelope-o"></i> '.$settings['foter_title3'].'</h3>':'','
+	',!empty($settings['foter_title3'])?'<h3><i class="fas fa-comments"></i> '.$settings['foter_title3'].'</h3>':'','
 <div class="dividerfw"></div>
 <div class="social_media clearfix">';
 echo'
-	<a class="facebook" target="_blank" data-ipstooltip="" href="', $settings['facebook_url'] , '" _title="Facebook"><i class="fa fa-facebook"></i></a>
-	<a class="twitter" target="_blank" data-ipstooltip="" href="', $settings['twitter_url'] , '" _title="Twitter"><i class="fa fa-twitter"></i></a>
-	<a class="youtube" target="_blank" data-ipstooltip="" href="', $settings['youtube_url'] , '" _title="Youtube"><i class="fa fa-youtube"></i></a>
-	<a class="dribbble" target="_blank" data-ipstooltip="" href="', $settings['dribble_url'] , '" _title="Dribbble"><i class="fa fa-dribbble"></i></a>
-	<a class="vimeo" target="_blank" data-ipstooltip="" href="', $settings['vimeo_url'] , '" _title="Vimeo"><i class="fa fa-vimeo"></i></a>
-	<a class="googleplus" target="_blank" data-ipstooltip="" href="', $settings['googleplus_url'] , '" _title="Google Plus"><i class="fa fa-google-plus"></i></a>
-	<a class="linkedIn" target="_blank" data-ipstooltip="" href="', $settings['linkedin_url'] , '" _title="LinkedIn"><i class="fa fa-linkedin"></i></a>
-	<a class="pinterest" target="_blank" data-ipstooltip="" href="', $settings['pinterest_url'] , '" _title="Pinterest"><i class="fa fa-pinterest"></i></a>
-	<a class="instagram" target="_blank" data-ipstooltip="" href="', $settings['instagram_url'] , '" _title="Instagram"><i class="fa fa-instagram"></i></a>
-	<a class="digg" target="_blank" data-ipstooltip="" href="', $settings['digg_url'] , '" _title="Digg"><i class="fa fa-digg"></i></a>	
+	<a class="facebook" target="_blank" data-ipstooltip="" href="', $settings['facebook_url'] , '" _title="Facebook"><i class="fab fa-facebook-f"></i></a>
+	<a class="twitter" target="_blank" data-ipstooltip="" href="', $settings['twitter_url'] , '" _title="Twitter"><i class="fab fa-twitter"></i></a>
+	<a class="youtube" target="_blank" data-ipstooltip="" href="', $settings['youtube_url'] , '" _title="Youtube"><i class="fab fa-youtube"></i></a>
+	<a class="dribbble" target="_blank" data-ipstooltip="" href="', $settings['dribble_url'] , '" _title="Dribbble"><i class="fab fa-dribbble"></i></a>
+	<a class="vimeo" target="_blank" data-ipstooltip="" href="', $settings['vimeo_url'] , '" _title="Vimeo"><i class="fab fa-vimeo-v"></i></a>
+	<a class="googleplus" target="_blank" data-ipstooltip="" href="', $settings['googleplus_url'] , '" _title="Google Plus"><i class="fab fa-google-plus-g"></i></a>
+	<a class="linkedIn" target="_blank" data-ipstooltip="" href="', $settings['linkedin_url'] , '" _title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+	<a class="pinterest" target="_blank" data-ipstooltip="" href="', $settings['pinterest_url'] , '" _title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+	<a class="instagram" target="_blank" data-ipstooltip="" href="', $settings['instagram_url'] , '" _title="Instagram"><i class="fab fa-instagram"></i></a>
+	<a class="digg" target="_blank" data-ipstooltip="" href="', $settings['digg_url'] , '" _title="Digg"><i class="fab fa-digg"></i></a>	
 </div>
          <div class="contact-button">
 		<a rel="nofollow" href="', $settings['quicknav_url6'] , '" class="ipsButton ipsButton_primary ipsButton_fullWidth button20"><span>' , $settings['quicknav_but6'] , '</span></a>

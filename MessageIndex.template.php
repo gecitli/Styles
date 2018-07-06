@@ -39,7 +39,11 @@ function template_main()
 			echo '
 				<div id="board_', $board['id'], '" class="up_contain">
 					<div class="board_icon">
-						<a href="', ($board['is_redirect'] || $context['user']['is_guest'] ? $board['href'] : $scripturl . '?action=unread;board=' . $board['id'] . '.0;children'), '" class="board_', $board['board_class'], '"', !empty($board['board_tooltip']) ? ' title="' . $board['board_tooltip'] . '"' : '', '></a>
+						<span class="ipsItemStatus ipsItemStatus_large cForumIcon_normal ipsItemStatus_read">
+						<a href="', ($board['is_redirect'] || $context['user']['is_guest'] ? $board['href'] : $scripturl . '?action=unread;board=' . $board['id'] . '.0;children'), '">
+							<i class="fa fa-board_', $board['board_class'], '"', !empty($board['board_tooltip']) ? ' title="' . $board['board_tooltip'] . '"' : '', '></i>
+						</a>
+						</span>
 					</div>
 					<div class="info">
 						<a class="subject mobile_subject" href="', $board['href'], '" id="b', $board['id'], '">

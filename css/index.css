@@ -1058,7 +1058,7 @@ img.sort, .sort {
 #profile_menu_top > img.avatar {
 	max-height: 18px;
 	max-width: 18px;
-	margin: 2px 5px 0 0;
+	margin: 8px 5px 0 0;
 	float: left;
 	padding: 0;
 }
@@ -1121,7 +1121,6 @@ h1.forumtitle {
 	font-size: 1.8em;
 	font-family: "Tahoma", sans-serif;
 	margin: 0;
-	padding: 22px 12px 6px 10px;
 	float: left;
 	font-weight: normal;
 }
@@ -1212,6 +1211,7 @@ ul li.greeting {
     font-size: .9em;
     overflow: hidden;
     background-color: rgba(0,0,0,.3);
+	border: 1px solid #000000;
 }
 .navigate_section ul li {
 	float: left;
@@ -1245,6 +1245,7 @@ ul li.greeting {
 .navigate_section .unread_links a {
 	padding: 4px 0 4px 10px;
 	margin-top: 4px;
+	    color: #fff;
 }
 /* The content section */
 #content_section {
@@ -3980,7 +3981,7 @@ article, aside, footer, header, nav, section {
     display: block;
 }
 .header-bg {
-    background-image: url(../images/header-bg.png);
+    background-image: url(../images/dg.jpg);
     background-repeat: repeat;
     background-position: center;
     background-size: cover;
@@ -4043,18 +4044,6 @@ article, aside, footer, header, nav, section {
 }
 i {
     margin-right: 5px;
-}
-.fa-fire-extinguisher:before, .fa-moderate:before {
-    content: "\f134";
-}
-.fa-suitcase:before, .fa-admin:before {
-    content: "\f0f2";
-}
-.fa-group:before, .fa-users:before, .fa-mlist:before, .fa-membergroups:before, .fa-starters:before, .fa-members_request:before {
-    content: "\f0c0";
-}
-out:before, .fa-logout:before, .fa-exit:before {
-    content: "\f08b";
 }
 .anagovde {
     display: inline-flex;
@@ -4299,4 +4288,47 @@ out:before, .fa-logout:before, .fa-exit:before {
 }
 legend {
     font-size: 14px;
+}
+.ipsItemStatus.ipsItemStatus_large {
+    background: #353c41;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    display: inline-block;
+    text-align: center;
+    font-size: 18px;
+    -webkit-transition: 0.15s all linear;
+    -moz-transition: 0.15s all linear;
+    -ms-transition: 0.15s all linear;
+    -o-transition: 0.15s all linear;
+    transition: 0.15s all linear;
+}
+.board_icon i {
+    color: rgb(255, 255, 255);
+    text-indent: 0;
+    /* font-size: 21px; */
+    text-align: center;
+    top: 11px;
+    position: relative;
+}
+.ipsItemStatus.ipsItemStatus_large {
+    color: #8d9aa6;
+    border-radius: 4px;
+}
+
+.ipsItemStatus.ipsItemStatus_read {
+    opacity: 0.6;
+}
+h1.forumtitle .side_icon {
+    width: 100px;
+    line-height: 100px;
+    color: #ffffff8a;
+    font-size: 58px;
+    float: none;
+}
+h1.forumtitle div {
+    display: inline-block;
+    vertical-align: middle;
 }

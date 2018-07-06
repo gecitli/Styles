@@ -67,6 +67,7 @@
 	}
 	.dropmenu li a, .dropmenu li:hover a {
 		padding: 5px 0;
+		color: #346;
 	}
 	.dropmenu li a, .dropmenu li a:hover {
 		text-indent: 10px;
