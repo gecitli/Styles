@@ -281,12 +281,22 @@ function template_ic_block_recent()
 		/* Each post in latest_posts has:
 				board (with an id, name, and link.), topic (the topic's id.), poster (with id, name, and link.),
 				subject, short_subject (shortened with...), time, link, and href. */
-		foreach ($context['latest_posts'] as $post){
-		loadMemberData($post['poster']['id']);
-		loadMemberContext($post['poster']['id']);
+		$alter = true;
+					foreach ($context['latest_posts'] as $post) {
+						$last_poster = $post['poster']['id'];
+						if($last_poster!=0) {
+							// Get The Avatar the easy Way
+							loadMemberData($last_poster);
+							loadMemberContext($last_poster);
+							
+							$ava = !empty($memberContext[$last_poster]['avatar']['image']) ? $memberContext[$last_poster]['avatar']['href'] : $settings['theme_url'].'/images/default_avatar.png';
+						} else {
+							$ava = $settings['theme_url'].'/images/default_avatar.png';
+						}
+				
 			echo '<li>';
-					if($memberContext[$post['poster']['id']]['avatar']['image'])
-				echo'', $memberContext[$post['poster']['id']]['avatar']['image'],'';
+					$ava = !empty($memberContext[$last_poster]['avatar']['image']) ? $memberContext[$last_poster]['avatar']['href'] : $settings['theme_url'].'/images/default_avatar.png';
+				echo'<td width="2%" class="icon2 avatared"><img class="avatar" src="', $ava, '" /></td>';
 						echo'<strong>', $post['link'], '</strong><br/>
 						', $post['poster']['link'], '<br/>
 						', $post['time'], '
